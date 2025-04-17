@@ -42,8 +42,8 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <img src={logoImage} alt="logo img" />
-        <a className="btn btn-ghost text-2xl font-bold">
+        <img className="md:block hidden" src={logoImage} alt="logo img" />
+        <a className="btn md:text-2xl text-base font-bold">
           Book <span className="text-yellow-400">Vibe</span>
         </a>
       </div>
@@ -52,8 +52,8 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1"> {links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn bg-[#23BE0A] text-white mr-4">Sign In</a>
-        <a className="btn bg-[#59C6D2] text-white">Sign Up</a>
+        <a className="btn bg-[#23BE0A] text-white mr-0 md:mr-4">Sign In</a>
+        <a className="btn md:block hidden bg-[#59C6D2] text-white">Sign Up</a>
       </div>
     </div>
   );

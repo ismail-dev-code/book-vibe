@@ -28,7 +28,7 @@ const Books =  ({data}) => {
         }
       >
         <h3 className="text-center text-2xl font-bold mt-12 mb-4">Books</h3>
-       <div className="w-10/12 mx-auto mb-12 grid gap-4 grid-cols-3">
+       <div className="w-10/12 mx-auto mb-12 grid gap-4 grid-cols-1 md:grid-cols-3">
        {
             data.map((singleData)=><Book key={singleData.bookId} singleData={singleData}></Book>)
         }
