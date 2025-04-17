@@ -1,10 +1,12 @@
 import { Star } from "lucide-react";
 import React, { use } from "react";
+import { NavLink } from "react-router";
 
 const Book = ({ singleData }) => {
   console.log(singleData);
   return (
-    <div>
+    <NavLink to={`/BookDetails/${singleData.bookId}`}>
+        <div>
       <div className="card bg-base-100 w-full h-fit shadow-sm">
         <figure className="bg-gray-100 w-2/3 mx-auto rounded-md p-3">
           <img className="md:w-[240px] w-full h-full md:h-[266px] rounded-md" src={singleData.image} />
@@ -23,7 +25,7 @@ const Book = ({ singleData }) => {
             <p>{singleData.tags[1]}</p>
             
           </div>
-         <div className="flex justify-around text-nowrap">
+         <div className="flex justify-around text-nowrap border-dashed border-t-1 border-gray-300">
          <h4>{singleData.publisher}</h4>
           <h4>{singleData.totalPages}</h4>
           <h4>{singleData.yearOfPublishing}</h4>
@@ -31,6 +33,7 @@ const Book = ({ singleData }) => {
         </div>
       </div>
     </div>
+    </NavLink>
   );
 };
 

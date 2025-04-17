@@ -1,15 +1,16 @@
 import React from "react";
 import logoImage from '../../assets/book.ico'
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <a>Listed Books</a>
+       <NavLink to='/'> <a>Home</a></NavLink>
       </li>
 
       <li>
-        <a>Pages to Read</a>
+      <NavLink to='/about'>  <a>About</a></NavLink>
       </li>
     </>
   );
@@ -42,18 +43,18 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <img className="md:block hidden" src={logoImage} alt="logo img" />
-        <a className="btn md:text-2xl text-base font-bold">
+        <img className="md:block hidden md:w-8 w-full" src={logoImage} alt="logo img" />
+        <a className="md:text-2xl text-base font-bold cursor-pointer">
           Book <span className="text-yellow-400">Vibe</span>
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <a className="btn text-[#23BE0A] mr-3.5 border-[#23BE0A]">Home</a>
+        <NavLink to='/'><a className="btn text-[#23BE0A] mr-3.5 border-[#23BE0A]">Home</a></NavLink>
         <ul className="menu menu-horizontal px-1"> {links}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn bg-[#23BE0A] text-white mr-0 md:mr-4">Sign In</a>
-        <a className="btn md:block hidden bg-[#59C6D2] text-white">Sign Up</a>
+        <a className="btn md:flex hidden bg-[#59C6D2] text-white">Sign Up</a>
       </div>
     </div>
   );
