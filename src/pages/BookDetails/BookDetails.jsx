@@ -15,7 +15,7 @@ const handleMarkAsRead = (id) =>{
 }
 
     return (
-        <div className='w-10/12 mx-auto flex justify-between gap-8 my-12 items-center'>
+        <div className='w-10/12 mx-auto flex md:flex-row flex-col justify-between gap-8 my-12 items-center'>
         <div className="details-img flex-1 flex justify-center rounded-xl bg-gray-50">
             <img className='h-[440px] my-6 rounded-md' src={image} alt="book image" />
         </div>

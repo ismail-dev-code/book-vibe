@@ -16,7 +16,7 @@ const Book = ({ singleData }) => {
             <button className="btn mr-4 text-[#23BE0A]">Young Adult</button>
             <button className="btn text-[#23BE0A]">Identity</button>
           </div>
-          <h1 className="card-title md:text-nowrap">{singleData.bookName}</h1>
+          <h1 className="card-title md:text-nowrap text-base font-bold">{singleData.bookName}</h1>
           <p>By {singleData.author}
           </p>
           <div className="card-actions justify-between flex-1">
