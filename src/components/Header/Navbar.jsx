@@ -1,4 +1,5 @@
 import React from "react";
+import logoImage from '../../assets/book.ico'
 
 const Navbar = () => {
   const links = (
@@ -41,6 +42,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
+        <img src={logoImage} alt="logo img" />
         <a className="btn btn-ghost text-2xl font-bold">
           Book <span className="text-yellow-400">Vibe</span>
         </a>
