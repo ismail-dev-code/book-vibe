@@ -2,6 +2,8 @@ import { Signal } from 'lucide-react';
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { addToStoredDB } from '../utility/addToDB';
+import { ToastContainer } from 'react-toastify';
+import '../utility/addToDB';
 
 const BookDetails = () => {
     const {id} = useParams();
@@ -41,7 +43,9 @@ const handleMarkAsRead = (id) =>{
             <p>Rating: <span className='font-bold'>{rating}</span></p>
            </div>
            <div className='flex gap-5 mt-4'>
-           <button onClick={()=>handleMarkAsRead(id)} className="btn btn-sm bg-green-500 text-white">Mark As Read</button>
+           <button onClick={() => handleMarkAsRead(bookId)} className="btn btn-sm bg-green-500 text-white">
+  <ToastContainer className='text-center'></ToastContainer> Mark As Read
+</button>
            <button className="btn btn-sm bg-green-500 text-white">Add to WishList</button>
            </div>
         </div>
