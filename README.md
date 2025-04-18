@@ -1,4 +1,4 @@
-# FlagshipFaceOff Resources
+# BookVibe Resources
 
 [Live Demo](https://book-vibe-ismail.netlify.app/)
 
